@@ -1,0 +1,15 @@
+{% extends 'dummy.html' %}
+
+
+{% block body_block %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ UO.as_p }}
+
+    <input type="submit" value="Submit">
+
+
+</form>
+
+{% endblock %}

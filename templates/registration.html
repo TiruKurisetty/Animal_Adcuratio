@@ -1,0 +1,66 @@
+{% extends 'dummy.html' %}
+{% block title %}
+    <title>registration</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    body
+    {
+       background-image:url('https://img.freepik.com/premium-photo/wallpaper-with-dark-dramatic-gradient-colors-ai-generation_201606-3458.jpg');
+        background-size: cover;
+    }
+    input
+    {
+        color: black;
+        border-radius: 7%;
+    }
+    label
+    {
+        color: white;
+        padding: 10px;
+    }
+   
+h1
+{  background:radial-gradient(circle,lightyellow,brown,lightblue,lightpink,lightblue);
+   animation: nvn 2s 1s infinite forwards linear;
+   color:black;
+   text-align: center;
+   border-radius: 45px;
+   
+}
+@keyframes nvn {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    25%{
+        filter: hue-rotate(90deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    75%{
+        filter: hue-rotate(270deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+</style>
+        <h1>Registration Form</h1>
+<div id="reg1">
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data" class="form-grop">
+            {% csrf_token %}
+            <table>
+                <tr>
+               <td>{{ufo}}</td>
+            </tr>
+            </table>
+            
+        <input type="submit" value="Submit" class="btn btn-danger">
+        </form>
+    </div>
+</div>
+{% endblock %}

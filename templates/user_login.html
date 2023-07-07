@@ -1,0 +1,39 @@
+{% extends 'dummy.html' %}
+{% block title %}
+    <title>user_login</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    body
+    {
+        background-image: url('https://as2.ftcdn.net/v2/jpg/02/58/86/97/1000_F_258869730_KSydnAki0M5lBLRthoTtCfIxkwhA5VzF.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        
+    }
+    label
+    {
+        padding: 20px;
+    }
+</style>
+        <h1>LOGIN</h1>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <label for="username">username:</label>
+            <input type="text" name="username" id="username"><br>
+
+            <label for="password">password</label>
+            <input type="password" name="password" id="password"><br>
+
+            <input type="submit" value="Login" class="btn btn-success">
+
+        </form>
+
+{% endblock %}
+
+   

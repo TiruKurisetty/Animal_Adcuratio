@@ -1,0 +1,24 @@
+{% extends 'dummy.html' %}
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    body
+    {
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        background-image: url('https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?w=740&t=st=1688748405~exp=1688749005~hmac=5f691868c4443bd5ede88cc65eec1c0d30d9024507655c82baa16ddf810fbf09');
+    }
+</style>
+    {% if username %}
+    
+    <h1>WELCOME TO HOME PAGE MR/MS {{username}}</h1>
+    {% else %}
+        
+    <h1>WELCOME TO HOME PAGE</h1>
+    {% endif %}
+{% endblock %}
